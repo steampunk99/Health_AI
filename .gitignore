@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+model/llama2.bin
+environment
+
 # Distribution / packaging
 .Python
 build/
@@ -25,6 +28,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -127,6 +132,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+Server/node_modules
 
 # Spyder project settings
 .spyderproject

@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 model/llama2.bin
-environment
+env
 
 # Distribution / packaging
 .Python

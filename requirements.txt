@@ -2,8 +2,7 @@ langchain
 torch
 accelerate
 #bitsandbytes
-transformers==2.2.2
-c_
+ctransformers
 sentence_transformers
 streamlit
 streamlit_chat
@@ -11,3 +10,4 @@ faiss-cpu
 altair
 tiktoken
 huggingface-hub
+pip==24.0

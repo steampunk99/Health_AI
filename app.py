@@ -1,30 +1,43 @@
-import streamlit as st
-import ollama
+from flask import Flask, request, jsonify
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_groq import ChatGroq
+import os
 
-st.title("💬 Medical Chatbot")
 
-if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+app = Flask(__name__)
 
-### Write Message History
-for msg in st.session_state.messages:
-    if msg["role"] == "user":
-        st.chat_message(msg["role"], avatar="🧑‍💻").write(msg["content"])
-    else:
-        st.chat_message(msg["role"], avatar="🤖").write(msg["content"])
+#Initialize mistral chat api
+API_KEY = os.environ.get("GROQAPI_KEY")
+chat = ChatGroq(temperature=0, groq_api_key=API_KEY, model_name="mixtral-8x7b-32768")
 
-## Generator for Streaming Tokens
-def generate_response():
-    response = ollama.chat(model='llama2', stream=True, messages=st.session_state.messages)
-    for partial_resp in response:
-        token = partial_resp["message"]["content"]
-        st.session_state["full_message"] += token
-        yield token
+# Define the system message and create the chat prompt template
+system = "You are a helpful assistant that only answers medical related questions, if asked anything other than a medical question, politely decline and ask them if they have a medical question"
+human = "{text}"
+prompt = ChatPromptTemplate.from_messages([("system", system), ("human", human)])
 
-if prompt := st.chat_input():
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    st.chat_message("user", avatar="🧑‍💻").write(prompt)
-    st.session_state["full_message"] = ""
-    st.chat_message("assistant", avatar="🤖").write_stream(generate_response)
-    st.session_state.messages.append({"role": "assistant", "content": st.session_state["full_message"]})   
+@app.route('/chat', methods=["POST"])
+def chat_endpoint():
+    try:
+        #get user input from the body
+        user_input = request.json.get("message")
+
+        if not user_input:
+            return jsonify({"error":"No message provided"}), 400
+        
+        # invoke the chain with the user's input
+        chain = prompt | chat
+
+        # stream the response
+        response = chain.stream({"text": user_input})
+
+        # join the streamed response chunks
+        response_text = "".join(chunk.content for chunk in response)
+
+        return jsonify({"response":response_text})
+
+    except Exception as e:
+        return jsonify({"error":str(e)}), 500
+    
+if __name__ == "__main__":
+    app.run(debug=True)
     

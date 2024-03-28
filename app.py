@@ -39,5 +39,9 @@ def chat_endpoint():
         return jsonify({"error":str(e)}), 500
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Specify the port you want to bind to (e.g., 5000)
+    port = int(os.environ.get("PORT", 5000))
+    # Run the Flask application, binding it to 0.0.0.0 (all available interfaces) and the specified port
+    app.run(host='0.0.0.0', port=port, debug=True)
+
     

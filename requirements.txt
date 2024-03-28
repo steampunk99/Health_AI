@@ -3,3 +3,4 @@ streamlit_chat
 pip==24.0
 langchain_groq
 python-dotenv
+flask

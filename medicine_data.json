@@ -1,0 +1,202 @@
+[
+  {
+    "genericName": "Paracetamol",
+    "brandName": "Tylenol",
+    "strength": "500mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 2200,
+    "image": "medicine.png",
+    "category": "Painkillers"
+  },
+  {
+    "genericName": "Ibuprofen",
+    "brandName": "Advil",
+    "strength": "200mg",
+    "units": "Capsules",
+    "quantity": 24,
+    "price": 2400,
+    "image": "medicine.png",
+    "category": "Painkillers"
+  },
+  {
+    "genericName": "Loratadine",
+    "brandName": "Claritin",
+    "strength": "10mg",
+    "units": "Tablets",
+    "quantity": 20,
+    "price": 3700,
+    "image": "medicine.png",
+    "category": "Antihistamines"
+  },
+  {
+    "genericName": "Omeprazole",
+    "brandName": "Prilosec",
+    "strength": "20mg",
+    "units": "Capsules",
+    "quantity": 30,
+    "price": 5900,
+    "image": "medicine.png",
+    "category": "Gastric Medications"
+  },
+  {
+    "genericName": "Aspirin",
+    "brandName": "Bayer",
+    "strength": "325mg",
+    "units": "Tablets",
+    "quantity": 50,
+    "price": 1800,
+    "image": "medicine.png",
+    "category": "Painkillers"
+  },
+  {
+    "genericName": "Diphenhydramine",
+    "brandName": "Benadryl",
+    "strength": "25mg",
+    "units": "Capsules",
+    "quantity": 36,
+    "price": 2900,
+    "image": "medicine.png",
+    "category": "Antihistamines"
+  },
+  {
+    "genericName": "Simvastatin",
+    "brandName": "Zocor",
+    "strength": "20mg",
+    "units": "Tablets",
+    "quantity": 28,
+    "price": 4600,
+    "image": "medicine.png",
+    "category": "Cholesterol Medications"
+  },
+  {
+    "genericName": "Metformin",
+    "brandName": "Glucophage",
+    "strength": "500mg",
+    "units": "Tablets",
+    "quantity": 60,
+    "price": 3300,
+    "image": "medicine.png",
+    "category": "Diabetes Medications"
+  },
+  {
+    "genericName": "Amoxicillin",
+    "brandName": "Amoxil",
+    "strength": "250mg",
+    "units": "Capsules",
+    "quantity": 20,
+    "price": 5600,
+    "image": "medicine.png",
+    "category": "Antibiotics"
+  },
+  {
+    "genericName": "Atorvastatin",
+    "brandName": "Lipitor",
+    "strength": "40mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 7100,
+    "image": "medicine.png",
+    "category": "Cholesterol Medications"
+  },
+  {
+    "genericName": "Cetirizine",
+    "brandName": "Zyrtec",
+    "strength": "10mg",
+    "units": "Tablets",
+    "quantity": 25,
+    "price": 4300,
+    "image": "medicine.png",
+    "category": "Antihistamines"
+  },
+  {
+    "genericName": "Naproxen",
+    "brandName": "Aleve",
+    "strength": "220mg",
+    "units": "Tablets",
+    "quantity": 24,
+    "price": 3600,
+    "image": "medicine.png",
+    "category": "Painkillers"
+  },
+  {
+    "genericName": "Ciprofloxacin",
+    "brandName": "Cipro",
+    "strength": "500mg",
+    "units": "Tablets",
+    "quantity": 14,
+    "price": 8600,
+    "image": "medicine.png",
+    "category": "Antibiotics"
+  },
+  {
+    "genericName": "Lisinopril",
+    "brandName": "Zestril",
+    "strength": "10mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 2900,
+    "image": "medicine.png",
+    "category": "Cardiovascular Medications"
+  },
+  {
+    "genericName": "Hydrochlorothiazide",
+    "brandName": "HydroDIURIL",
+    "strength": "25mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 4100,
+    "image": "medicine.png",
+    "category": "Diuretics"
+  },
+  {
+    "genericName": "Metoprolol",
+    "brandName": "Lopressor",
+    "strength": "50mg",
+    "units": "Tablets",
+    "quantity": 60,
+    "price": 4400,
+    "image": "medicine.png",
+    "category": "Cardiovascular Medications"
+  },
+  {
+    "genericName": "Warfarin",
+    "brandName": "Coumadin",
+    "strength": "5mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 2600,
+    "image": "medicine.png",
+    "category": "Anticoagulants"
+  },
+  {
+    "genericName": "Fluoxetine",
+    "brandName": "Prozac",
+    "strength": "20mg",
+    "units": "Capsules",
+    "quantity": 28,
+    "price": 5800,
+    "image": "medicine.png",
+    "category": "Antidepressants"
+  },
+  {
+    "genericName": "Rosuvastatin",
+    "brandName": "Crestor",
+    "strength": "10mg",
+    "units": "Tablets",
+    "quantity": 30,
+    "price": 8200,
+    "image": "medicine.png",
+    "category": "Cholesterol Medications"
+  },
+  {
+    "genericName": "Metronidazole",
+    "brandName": "Flagyl",
+    "strength": "500mg",
+    "units": "Tablets",
+    "quantity": 20,
+    "price": 5200,
+    "image": "medicine.png",
+    "category": "Antibiotics"
+  }
+]

@@ -5,3 +5,5 @@ langchain_groq
 python-dotenv
 flask
 sentence-transformers
+langchain-groq
+spacy

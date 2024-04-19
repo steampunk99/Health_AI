@@ -33,11 +33,21 @@ for doctor in doctors_data:
 search_index.extend([publication['topic'] + ' ' + publication['body'] for publication in publications_data])
 search_index.extend([medicine['genericName'] + ' ' + medicine['brandName'] + ' ' + medicine['strength'] + ' ' + medicine['category']  for medicine in medicine_data])
 
-# Initialize the sentence transformer model
-model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Load spaCy model (download 'en_core_web_sm' model)
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('/model/encore/en_core_web_sm')
+# nlp.to_disk(r'C:\Users\HP ZBOOK G5\Desktop\health-ai\model\encore')
+
+
+# model = SentenceTransformer('/model/sentence/all-MiniLM-L6-v2')
+# model.save(r'C:\Users\HP ZBOOK G5\Desktop\health-ai\model\sentence')
+
+# Load the sentence transformer model
+model_path = './model/all-MiniLM-L6-v2'
+model = SentenceTransformer(model_path)
+
+# Load the spaCy model
+spacy_model_path = './model/encore'
+nlp = spacy.load(spacy_model_path)
 
 @app.route('/search', methods=["POST"])
 def search_endpoint():
@@ -74,7 +84,8 @@ def search_endpoint():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Dynamic recommendation system (modify based on your medicine data)
+
+# Dynamic recommendation system 
 @app.route('/recommendations', methods=["POST"])
 def recommendations_endpoint():
     try:
@@ -120,8 +131,7 @@ def chat_endpoint():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     # Specify the port you want to bind to (e.g., 5000)

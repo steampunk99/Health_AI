@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize the Mixtral ChatGroq API
-chat = ChatGroq(temperature=0, groq_api_key="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", model_name="mixtral-8x7b-32768")
+chat = ChatGroq(temperature=0, groq_api_key="", model_name="mixtral-8x7b-32768")
 
 # Define the system message and create the ChatPromptTemplate
 system = "You are a very smart AI assistant that has vast knowledge in science and you answer only medical / science related questions."
